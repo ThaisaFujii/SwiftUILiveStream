@@ -13,12 +13,12 @@ struct ContentView: View {
         TabView {
             HomeView()
             // modifier
-                .tabItem{
+                .tabItem {
                     Image(systemName: "hose.fill")
                     Text("Home")
                 }
             ListView()
-                .tabItem{
+                .tabItem {
                     Image(systemName: "eyes.inverse")
                     Text("Detail")
                 }

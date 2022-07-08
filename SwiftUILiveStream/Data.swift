@@ -12,30 +12,31 @@ struct Item: Identifiable{
     var title: String
     var text: String
     var image: String
+    var details: String
     var gradient: LinearGradient
 }
 //sample data
 var items = [
     
-    Item(title: "SwiftUI for iOS 14", text: "A complete guide to designing for iOS 14 with videos, examples and design files", image: "Blob 1", gradient: LinearGradient(
+    Item(title: "SwiftUI for iOS 14", text: "A complete guide to designing for iOS 14 with videos, examples and design files", image: "Blob 1", details: "kkkkkkkk", gradient: LinearGradient(
         gradient: Gradient(stops: [
             .init(color: Color(.blue), location: 0),
             .init(color: Color(.purple), location: 1)]),
         startPoint: UnitPoint(x: 0.5002249700310126, y: 3.0834283490377423e-7),
         endPoint: UnitPoint(x: -0.0016390833199537713, y: 0.977085239704672))),
-    Item(title: "UI Design for Developers", text: "A complete guide to designing for iOS 14 with videos, examples and design files", image: "Blob 2", gradient: LinearGradient(
+    Item(title: "UI Design for Developers", text: "A complete guide to designing for iOS 14 with videos, examples and design files", image: "Blob 2", details: "äaaaaaa",gradient: LinearGradient(
         gradient: Gradient(stops: [
             .init(color: Color(.blue), location: 0),
             .init(color: Color(.cyan), location: 1)]),
         startPoint: UnitPoint(x: 0.5002249700310126, y: 3.0834283490377423e-7),
         endPoint: UnitPoint(x: -0.0016390833199537713, y: 0.977085239704672))),
-    Item(title: "UI Design Handbook", text: "A complete guide to designing for iOS 14 with videos, examples and design files", image: "Blob 3", gradient: LinearGradient(
+    Item(title: "UI Design Handbook", text: "A complete guide to designing for iOS 14 with videos, examples and design files", image: "Blob 3", details: "vvvvvvv", gradient: LinearGradient(
         gradient: Gradient(stops: [
             .init(color: Color(.red), location: 0),
             .init(color: Color(.blue), location: 1)]),
         startPoint: UnitPoint(x: 0.5002249700310126, y: 3.0834283490377423e-7),
         endPoint: UnitPoint(x: -0.0016390833199537713, y: 0.977085239704672))),
-    Item(title:"LiveStream", text: "A complete guide to designing for iOS 14 with videos, examples and design files", image: "Blob 4", gradient: LinearGradient(
+    Item(title:"LiveStream", text: "A complete guide to designing for iOS 14 with videos, examples and design files", image: "Blob 4", details: "ssssss", gradient: LinearGradient(
         gradient: Gradient(stops: [
             .init(color: Color(.red), location: 0),
             .init(color: Color(.blue), location: 1)]),

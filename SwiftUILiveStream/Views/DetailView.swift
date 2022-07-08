@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct DetailView: View {
+    var item: Item
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 8){
-                Image("Blob 1")
+                Image(item.image)
                     .resizable()
                     .scaledToFit()
                     .frame(height: 128)
                     .frame(maxWidth: .infinity)
-                Text("SwiftUI for iOS 14")
+                Text(item.title)
                     .font(.title)
                     .fontWeight(.bold)
-                Text("A complete guide to designing for iOS 14 with videos, examples and design files")
+                Text(item.text)
                     .lineLimit(2)
                     .opacity(0.7)
                 Text("20 sections - 3 hours")
@@ -27,19 +29,14 @@ struct DetailView: View {
             }
             .foregroundColor(.white)
             .padding(16)
-            .background(LinearGradient(
-                gradient: Gradient(stops: [
-                    .init(color: Color(.blue), location: 0),
-                    .init(color: Color(.purple), location: 1)]),
-                startPoint: UnitPoint(x: 0.5002249700310126, y: 3.0834283490377423e-7),
-                endPoint: UnitPoint(x: -0.0016390833199537713, y: 0.977085239704672)))
+            .background(item.gradient)
             
             VStack(alignment: .leading, spacing: 16) {
-                Text("SwiftUI is hands-down the best way for designers to take a first setp into code.")
+                Text(item.text)
                     .font(.headline)
                 Text("This course")
                     .font(.title).bold()
-                Text("This course is unlike any other. We care about design and want to make sure that you get better at it in the process.")
+                Text(item.details)
             }
             .padding()
         }
@@ -48,7 +45,12 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(item: Item(title: "SwiftUI for iOS 14", text: "A complete guide to designing for iOS 14 with videos, examples and design files", image: "Blob 1", details: "aaaaaaa", gradient: LinearGradient(
+            gradient: Gradient(stops: [
+                .init(color: Color(.blue), location: 0),
+                .init(color: Color(.purple), location: 1)]),
+            startPoint: UnitPoint(x: 0.5002249700310126, y: 3.0834283490377423e-7),
+            endPoint: UnitPoint(x: -0.0016390833199537713, y: 0.977085239704672))))
             .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }

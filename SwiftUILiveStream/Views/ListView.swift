@@ -14,11 +14,11 @@ struct ListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(0 ..< 5) { item in
-                   ListItem()
+                ForEach(items) { item in
+                    ListItem(item: item)
                     // If I show my model
                         .sheet(isPresented: $isShow, content: {
-                            DetailView()
+                            DetailView(item: item)
                         })
                     // when a tap happens the event will show - DetailView
                         .onTapGesture {

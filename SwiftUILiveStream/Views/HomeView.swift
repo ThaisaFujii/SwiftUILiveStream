@@ -14,7 +14,7 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack(spacing: 16){
                         ForEach(items) { item in
-                            NavigationLink(destination: DetailView()) {
+                            NavigationLink(destination: DetailView(item: item)) {
                                 // Components with dynamic data inside the loop
                                 CardView(item:item)
                             }
@@ -32,7 +32,7 @@ struct HomeView: View {
                 LazyVGrid(columns:
                             [GridItem(.adaptive(minimum: 160), spacing: 16)]) {
                     ForEach(items) { item in
-                        NavigationLink(destination: DetailView()) {
+                        NavigationLink(destination: DetailView(item:item)) {
                         SmallCardView(item:item)
                         }
                     }
